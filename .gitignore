@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+.venv/
+django_env/
+Lib/
+Scripts/
+pyvenv.cfg
+CACHEDIR.TAG
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
