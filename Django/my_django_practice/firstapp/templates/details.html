@@ -1,0 +1,14 @@
+<html>
+<body>
+{% extends "master.html" %}
+{% block title %}
+Details about {{employee.fname}} {{employee.lname}}
+{% endblock %}
+{% block content %}
+<h1>{{employees.fname}} {{employees.lname}}</h1>
+<p>Phone: {{employees.phone}}</p>
+<p>Joining data: {{employees.joined_date}}
+<p>Back to <a href="/firstapp">Employee</a></p>  
+{% endblock %}  
+</body>
+</html>

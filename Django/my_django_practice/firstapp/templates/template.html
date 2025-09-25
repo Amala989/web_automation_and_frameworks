@@ -1,0 +1,66 @@
+<!-- my_django_practice
+    manage.py
+    my_django_practice/
+    firstapp/
+        templates/
+        404.html
+        all_employees.html
+        details.html
+        main.html
+        master.html
+        myfirst.html
+        template.html -->
+
+<!-- <DOCTYPE html>
+<html>
+<body>
+<p>The Queryset object: </p>
+{{ myemployees }}
+{% load static %}
+<link rel="stylesheet" href="{% static 'first.css' %}">
+<p>Loop through the items: </p> -->
+<!-- # To get all values in the table -->
+<!-- <table border="1">
+    <tr>
+    <th>ID</th>
+    <th>Firstname</th> ##When get all.values()
+    <th>Lastname</th>
+    </tr>
+    {% for x in myemployees %}
+    <tr>
+        <td>{{ fn }}</td>    
+        <td> {{ x.fname }}</td>
+        <td> {{ x.lname }}</td>
+    </tr>
+    {% endfor %} -->
+
+    <!-- To get the specific coloum like fname -->
+    <!-- <table border="1">
+    {% for x in myemployees %}
+        {% for fn in x %}
+    <tr> -->
+        <!-- when only first name -->
+        <!-- <td>{{ fn }}</td>    
+    </tr>
+        {% endfor %}
+    {% endfor %} -->
+<!-- </table>
+</body>    
+</html> -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'global.css' %}">
+<body>
+
+{% for x in fruits %}
+  <h1>{{ x }}</h1>
+{% endfor %}
+
+<p>In myglobal.css you can see what the stylesheet looks like.</p>
+
+</body>
+</html>
+
+
+

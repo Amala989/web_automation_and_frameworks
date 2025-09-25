@@ -1,0 +1,19 @@
+<html>
+<body>
+{% extends "master.html" %}
+{% block title %}
+    Amazon - List of all employees
+{% endblock %}
+
+{% block content %}
+<p> <a href="/">HOME</a></p>
+<h1>Employee details</h1>
+<ul>
+    {% for x in employees %}
+        <li><a href="details/{{x.id}}">{{x.fname }}{{x.lname}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+</body>
+</html>
