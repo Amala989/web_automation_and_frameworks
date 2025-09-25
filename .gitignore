@@ -1,7 +1,10 @@
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Virtual environments
 venv/
 env/
 .venv/
@@ -10,7 +13,13 @@ Lib/
 Scripts/
 pyvenv.cfg
 CACHEDIR.TAG
+
+# IDEs/editors
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Databases
+*.sqlite3
+
