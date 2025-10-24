@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Your Tasks</h3>
+
+<form method="POST" action="{{ url_for('main.add_task') }}">
+    {{ form.hidden_tag() }}
+    <div class="input-group mb-3">
+        {{ form.title(class="form-control", placeholder="Enter new task") }}
+        <button class="btn btn-primary">{{ form.submit.label }}</button>
+    </div>
+</form>
+
+<ul class="list-group">
+    {% for task in tasks %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>
+                {% if task.complete %}
+                    <s>{{ task.title }}</s>
+                {% else %}
+                    {{ task.title }}
+                {% endif %}
+            </span>
+            <span>
+                <a href="{{ url_for('main.complete_task', task_id=task.id) }}" class="btn btn-sm btn-success">Toggle</a>
+                <a href="{{ url_for('main.delete_task', task_id=task.id) }}" class="btn btn-sm btn-danger">Delete</a>
+            </span>
+        </li>
+    {% else %}
+        <p class="text-muted">No tasks yet.</p>
+    {% endfor %}
+</ul>
+{% endblock %}
